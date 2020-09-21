@@ -1,6 +1,6 @@
-import { Constraint } from '../constraints/Constraint'
-import { ContactEquation } from '../equations/ContactEquation'
-import type { Body } from '../objects/Body'
+import { Constraint } from '../constraints/Constraint.ts'
+import { ContactEquation } from '../equations/ContactEquation.ts'
+import type { Body } from '../objects/Body.ts'
 
 /**
  * Constrains two bodies to be at a constant distance from each others center of mass.

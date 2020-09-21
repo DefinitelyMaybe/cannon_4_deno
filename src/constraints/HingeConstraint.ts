@@ -1,8 +1,8 @@
-import { PointToPointConstraint } from '../constraints/PointToPointConstraint'
-import { RotationalEquation } from '../equations/RotationalEquation'
-import { RotationalMotorEquation } from '../equations/RotationalMotorEquation'
-import { Vec3 } from '../math/Vec3'
-import type { Body } from '../objects/Body'
+import { PointToPointConstraint } from '../constraints/PointToPointConstraint.ts'
+import { RotationalEquation } from '../equations/RotationalEquation.ts'
+import { RotationalMotorEquation } from '../equations/RotationalMotorEquation.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import type { Body } from '../objects/Body.ts'
 
 export type HingeConstraintOptions = {
   maxForce?: number

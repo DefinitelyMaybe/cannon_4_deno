@@ -1,12 +1,12 @@
-import { EventTarget } from '../utils/EventTarget'
-import { Vec3 } from '../math/Vec3'
-import { Mat3 } from '../math/Mat3'
-import { Quaternion } from '../math/Quaternion'
-import { AABB } from '../collision/AABB'
-import { Box } from '../shapes/Box'
-import type { Shape } from '../shapes/Shape'
-import type { Material } from '../material/Material'
-import type { World } from '../world/World'
+import { EventTarget } from '../utils/EventTarget.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import { Mat3 } from '../math/Mat3.ts'
+import { Quaternion } from '../math/Quaternion.ts'
+import { AABB } from '../collision/AABB.ts'
+import { Box } from '../shapes/Box.ts'
+import type { Shape } from '../shapes/Shape.ts'
+import type { Material } from '../material/Material.ts'
+import type { World } from '../world/World.ts'
 
 export const BODY_TYPES = {
   DYNAMIC: 1 as const,

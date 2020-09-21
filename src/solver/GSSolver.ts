@@ -1,5 +1,5 @@
-import { Solver } from '../solver/Solver'
-import type { World } from '../world/World'
+import { Solver } from '../solver/Solver.ts'
+import type { World } from '../world/World.ts'
 
 /**
  * Constraint equation Gauss-Seidel solver.

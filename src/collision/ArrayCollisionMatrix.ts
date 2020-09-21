@@ -1,4 +1,4 @@
-import type { Body } from '../objects/Body'
+import type { Body } from '../objects/Body.ts'
 
 /**
  * Collision "matrix". It's actually a triangular-shaped array of whether two bodies are touching this step, for reference next step

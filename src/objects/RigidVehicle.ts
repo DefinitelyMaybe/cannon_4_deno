@@ -1,9 +1,9 @@
-import { Vec3 } from '../math/Vec3'
-import { Body } from '../objects/Body'
-import { Sphere } from '../shapes/Sphere'
-import { Box } from '../shapes/Box'
-import { HingeConstraint } from '../constraints/HingeConstraint'
-import type { World } from '../world/World'
+import { Vec3 } from '../math/Vec3.ts'
+import { Body } from '../objects/Body.ts'
+import { Sphere } from '../shapes/Sphere.ts'
+import { Box } from '../shapes/Box.ts'
+import { HingeConstraint } from '../constraints/HingeConstraint.ts'
+import type { World } from '../world/World.ts'
 
 export type RigidVehicleOptions = {
   coordinateSystem?: Vec3

@@ -1,7 +1,7 @@
-import { Vec3 } from '../math/Vec3'
-import type { Ray } from '../collision/Ray'
-import type { Transform } from '../math/Transform'
-import type { Quaternion } from '../math/Quaternion'
+import { Vec3 } from '../math/Vec3.ts'
+import type { Ray } from '../collision/Ray.ts'
+import type { Transform } from '../math/Transform.ts'
+import type { Quaternion } from '../math/Quaternion.ts'
 
 /**
  * Axis aligned bounding box class.

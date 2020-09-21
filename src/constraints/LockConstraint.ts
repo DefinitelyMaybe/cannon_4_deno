@@ -1,8 +1,8 @@
-import { PointToPointConstraint } from '../constraints/PointToPointConstraint'
-import { RotationalEquation } from '../equations/RotationalEquation'
-import { Vec3 } from '../math/Vec3'
-import type { Body } from '../objects/Body'
-import type { RotationalMotorEquation } from '../equations/RotationalMotorEquation'
+import { PointToPointConstraint } from '../constraints/PointToPointConstraint.ts'
+import { RotationalEquation } from '../equations/RotationalEquation.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import type { Body } from '../objects/Body.ts'
+import type { RotationalMotorEquation } from '../equations/RotationalMotorEquation.ts'
 
 export type LockConstraintOptions = {
   maxForce?: number

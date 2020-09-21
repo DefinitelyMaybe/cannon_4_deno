@@ -1,7 +1,7 @@
-import type { Vec3 } from '../math/Vec3'
-import type { Quaternion } from '../math/Quaternion'
-import type { Body } from '../objects/Body'
-import type { Material } from '../material/Material'
+import type { Vec3 } from '../math/Vec3.ts'
+import type { Quaternion } from '../math/Quaternion.ts'
+import type { Body } from '../objects/Body.ts'
+import type { Material } from '../material/Material.ts'
 
 export const SHAPE_TYPES = {
   SPHERE: 1 as const,

@@ -1,7 +1,7 @@
-import { JacobianElement } from '../math/JacobianElement'
-import { Vec3 } from '../math/Vec3'
-import type { Body } from '../objects/Body'
-import type { Shape } from '../shapes/Shape'
+import { JacobianElement } from '../math/JacobianElement.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import type { Body } from '../objects/Body.ts'
+import type { Shape } from '../shapes/Shape.ts'
 
 /**
  * Equation base class

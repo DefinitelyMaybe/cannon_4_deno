@@ -1,12 +1,12 @@
-import type { Body } from '../objects/Body'
-import { Vec3 } from '../math/Vec3'
-import { Quaternion } from '../math/Quaternion'
-import { Ray } from '../collision/Ray'
-import { WheelInfo } from '../objects/WheelInfo'
-import type { WheelInfoOptions } from '../objects/WheelInfo'
-import type { Transform } from '../math/Transform'
-import type { Constraint } from '../constraints/Constraint'
-import type { World } from '../world/World'
+import type { Body } from '../objects/Body.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import { Quaternion } from '../math/Quaternion.ts'
+import { Ray } from '../collision/Ray.ts'
+import { WheelInfo } from '../objects/WheelInfo.ts'
+import type { WheelInfoOptions } from '../objects/WheelInfo.ts'
+import type { Transform } from '../math/Transform.ts'
+import type { Constraint } from '../constraints/Constraint.ts'
+import type { World } from '../world/World.ts'
 
 export type RaycastVehicleOptions = {
   chassisBody: Body

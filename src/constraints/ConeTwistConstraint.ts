@@ -1,8 +1,8 @@
-import { PointToPointConstraint } from '../constraints/PointToPointConstraint'
-import { ConeEquation } from '../equations/ConeEquation'
-import { RotationalEquation } from '../equations/RotationalEquation'
-import { Vec3 } from '../math/Vec3'
-import type { Body } from '../objects/Body'
+import { PointToPointConstraint } from '../constraints/PointToPointConstraint.ts'
+import { ConeEquation } from '../equations/ConeEquation.ts'
+import { RotationalEquation } from '../equations/RotationalEquation.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import type { Body } from '../objects/Body.ts'
 
 export type ConeTwistConstraintOptions = {
   maxForce?: number

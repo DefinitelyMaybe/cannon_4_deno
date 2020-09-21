@@ -1,6 +1,6 @@
-import { Equation } from '../equations/Equation'
-import { Vec3 } from '../math/Vec3'
-import type { Body } from '../objects/Body'
+import { Equation } from '../equations/Equation.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import type { Body } from '../objects/Body.ts'
 
 /**
  * Contact/non-penetration constraint equation

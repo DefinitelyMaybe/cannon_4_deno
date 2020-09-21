@@ -1,7 +1,7 @@
-import { Solver } from '../solver/Solver'
-import { Body } from '../objects/Body'
-import type { Equation } from '../equations/Equation'
-import type { World } from '../world/World'
+import { Solver } from '../solver/Solver.ts'
+import { Body } from '../objects/Body.ts'
+import type { Equation } from '../equations/Equation.ts'
+import type { World } from '../world/World.ts'
 
 type SplitSolverNode = { body: Body | null; children: SplitSolverNode[]; eqs: Equation[]; visited: boolean }
 

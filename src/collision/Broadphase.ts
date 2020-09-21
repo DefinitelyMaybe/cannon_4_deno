@@ -1,8 +1,8 @@
-import { Body } from '../objects/Body'
-import { Vec3 } from '../math/Vec3'
-import { Quaternion } from '../math/Quaternion'
-import type { AABB } from '../collision/AABB'
-import type { World } from '../world/World'
+import { Body } from '../objects/Body.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import { Quaternion } from '../math/Quaternion.ts'
+import type { AABB } from '../collision/AABB.ts'
+import type { World } from '../world/World.ts'
 
 /**
  * Base class for broadphase implementations

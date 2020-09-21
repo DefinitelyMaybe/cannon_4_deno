@@ -1,4 +1,4 @@
-import { Vec3 } from '../math/Vec3'
+import { Vec3 } from '../math/Vec3.ts'
 
 /**
  * An element containing 6 entries, 3 spatial and 3 rotational degrees of freedom.

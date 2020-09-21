@@ -1,5 +1,5 @@
-import { Vec3 } from '../math/Vec3'
-import { Quaternion } from '../math/Quaternion'
+import { Vec3 } from '../math/Vec3.ts'
+import { Quaternion } from '../math/Quaternion.ts'
 
 export type TransformOptions = {
   position?: Vec3

@@ -1,5 +1,5 @@
-import { Vec3 } from '../math/Vec3'
-import type { Body } from '../objects/Body'
+import { Vec3 } from '../math/Vec3.ts'
+import type { Body } from '../objects/Body.ts'
 
 export type SpringOptions = {
   restLength?: number

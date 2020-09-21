@@ -1,7 +1,7 @@
-import { Broadphase } from '../collision/Broadphase'
-import type { AABB } from '../collision/AABB'
-import type { Body } from '../objects/Body'
-import type { World } from '../world/World'
+import { Broadphase } from '../collision/Broadphase.ts'
+import type { AABB } from '../collision/AABB.ts'
+import type { Body } from '../objects/Body.ts'
+import type { World } from '../world/World.ts'
 
 /**
  * Naive broadphase implementation, used in lack of better ones.

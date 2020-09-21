@@ -1,7 +1,7 @@
-import { Constraint } from '../constraints/Constraint'
-import { ContactEquation } from '../equations/ContactEquation'
-import { Vec3 } from '../math/Vec3'
-import type { Body } from '../objects/Body'
+import { Constraint } from '../constraints/Constraint.ts'
+import { ContactEquation } from '../equations/ContactEquation.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import type { Body } from '../objects/Body.ts'
 
 /**
  * Connects two bodies at given offset points.

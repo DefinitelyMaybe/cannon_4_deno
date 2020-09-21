@@ -1,6 +1,6 @@
-import { Utils } from '../utils/Utils'
-import type { Body } from '../objects/Body'
-import type { Equation } from '../equations/Equation'
+import { Utils } from '../utils/Utils.ts'
+import type { Body } from '../objects/Body.ts'
+import type { Equation } from '../equations/Equation.ts'
 
 export type ConstraintOptions = {
   collideConnected?: boolean

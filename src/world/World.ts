@@ -1,24 +1,24 @@
-import { EventTarget } from '../utils/EventTarget'
-import { GSSolver } from '../solver/GSSolver'
-import { NaiveBroadphase } from '../collision/NaiveBroadphase'
-import { Narrowphase } from '../world/Narrowphase'
-import { Vec3 } from '../math/Vec3'
-import { Material } from '../material/Material'
-import { ContactMaterial } from '../material/ContactMaterial'
-import { ArrayCollisionMatrix } from '../collision/ArrayCollisionMatrix'
-import { OverlapKeeper } from '../collision/OverlapKeeper'
-import { TupleDictionary } from '../utils/TupleDictionary'
-import { RaycastResult } from '../collision/RaycastResult'
-import { Ray } from '../collision/Ray'
-import { AABB } from '../collision/AABB'
-import { Body } from '../objects/Body'
-import type { Broadphase } from '../collision/Broadphase'
-import type { Solver } from '../solver/Solver'
-import type { ContactEquation } from '../equations/ContactEquation'
-import type { FrictionEquation } from '../equations/FrictionEquation'
-import type { RayOptions, RaycastCallback } from '../collision/Ray'
-import type { Constraint } from '../constraints/Constraint'
-import type { Shape } from '../shapes/Shape'
+import { EventTarget } from '../utils/EventTarget.ts'
+import { GSSolver } from '../solver/GSSolver.ts'
+import { NaiveBroadphase } from '../collision/NaiveBroadphase.ts'
+import { Narrowphase } from '../world/Narrowphase.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import { Material } from '../material/Material.ts'
+import { ContactMaterial } from '../material/ContactMaterial.ts'
+import { ArrayCollisionMatrix } from '../collision/ArrayCollisionMatrix.ts'
+import { OverlapKeeper } from '../collision/OverlapKeeper.ts'
+import { TupleDictionary } from '../utils/TupleDictionary.ts'
+import { RaycastResult } from '../collision/RaycastResult.ts'
+import { Ray } from '../collision/Ray.ts'
+import { AABB } from '../collision/AABB.ts'
+import { Body } from '../objects/Body.ts'
+import type { Broadphase } from '../collision/Broadphase.ts'
+import type { Solver } from '../solver/Solver.ts'
+import type { ContactEquation } from '../equations/ContactEquation.ts'
+import type { FrictionEquation } from '../equations/FrictionEquation.ts'
+import type { RayOptions, RaycastCallback } from '../collision/Ray.ts'
+import type { Constraint } from '../constraints/Constraint.ts'
+import type { Shape } from '../shapes/Shape.ts'
 
 export type WorldOptions = {
   gravity?: Vec3
@@ -874,17 +874,23 @@ World.prototype.emitContactEvents = (() => {
   }
 
   return function (): void {
+    // @ts-ignore
     const hasBeginContact = this.hasAnyEventListener('beginContact')
+    // @ts-ignore
     const hasEndContact = this.hasAnyEventListener('endContact')
 
     if (hasBeginContact || hasEndContact) {
+      // @ts-ignore
       this.bodyOverlapKeeper.getDiff(additions, removals)
     }
 
     if (hasBeginContact) {
       for (let i = 0, l = additions.length; i < l; i += 2) {
+        // @ts-ignore
         beginContactEvent.bodyA = this.getBodyById(additions[i])
+        // @ts-ignore
         beginContactEvent.bodyB = this.getBodyById(additions[i + 1])
+        // @ts-ignore
         this.dispatchEvent(beginContactEvent)
       }
       beginContactEvent.bodyA = beginContactEvent.bodyB = null
@@ -892,8 +898,11 @@ World.prototype.emitContactEvents = (() => {
 
     if (hasEndContact) {
       for (let i = 0, l = removals.length; i < l; i += 2) {
+        // @ts-ignore
         endContactEvent.bodyA = this.getBodyById(removals[i])
+        // @ts-ignore
         endContactEvent.bodyB = this.getBodyById(removals[i + 1])
+        // @ts-ignore
         this.dispatchEvent(endContactEvent)
       }
       endContactEvent.bodyA = endContactEvent.bodyB = null
@@ -901,21 +910,27 @@ World.prototype.emitContactEvents = (() => {
 
     additions.length = removals.length = 0
 
+    // @ts-ignore
     const hasBeginShapeContact = this.hasAnyEventListener('beginShapeContact')
+    // @ts-ignore
     const hasEndShapeContact = this.hasAnyEventListener('endShapeContact')
 
     if (hasBeginShapeContact || hasEndShapeContact) {
+      // @ts-ignore
       this.shapeOverlapKeeper.getDiff(additions, removals)
     }
 
     if (hasBeginShapeContact) {
       for (let i = 0, l = additions.length; i < l; i += 2) {
+        // @ts-ignore
         const shapeA = this.getShapeById(additions[i])
+        // @ts-ignore
         const shapeB = this.getShapeById(additions[i + 1])
         beginShapeContactEvent.shapeA = shapeA
         beginShapeContactEvent.shapeB = shapeB
         beginShapeContactEvent.bodyA = shapeA.body
         beginShapeContactEvent.bodyB = shapeB.body
+        // @ts-ignore
         this.dispatchEvent(beginShapeContactEvent)
       }
       beginShapeContactEvent.bodyA = beginShapeContactEvent.bodyB = beginShapeContactEvent.shapeA = beginShapeContactEvent.shapeB = null
@@ -923,12 +938,15 @@ World.prototype.emitContactEvents = (() => {
 
     if (hasEndShapeContact) {
       for (let i = 0, l = removals.length; i < l; i += 2) {
+        // @ts-ignore
         const shapeA = this.getShapeById(removals[i])
+        // @ts-ignore
         const shapeB = this.getShapeById(removals[i + 1])
         endShapeContactEvent.shapeA = shapeA
         endShapeContactEvent.shapeB = shapeB
         endShapeContactEvent.bodyA = shapeA.body
         endShapeContactEvent.bodyB = shapeB.body
+        // @ts-ignore
         this.dispatchEvent(endShapeContactEvent)
       }
       endShapeContactEvent.bodyA = endShapeContactEvent.bodyB = endShapeContactEvent.shapeA = endShapeContactEvent.shapeB = null

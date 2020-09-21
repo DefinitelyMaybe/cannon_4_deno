@@ -1,5 +1,5 @@
-import { ConvexPolyhedron } from '../shapes/ConvexPolyhedron'
-import { Vec3 } from '../math/Vec3'
+import { ConvexPolyhedron } from '../shapes/ConvexPolyhedron.ts'
+import { Vec3 } from '../math/Vec3.ts'
 
 /**
  * @class Cylinder

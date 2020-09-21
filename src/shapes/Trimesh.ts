@@ -1,9 +1,9 @@
-import { Shape } from '../shapes/Shape'
-import { Vec3 } from '../math/Vec3'
-import { Transform } from '../math/Transform'
-import { AABB } from '../collision/AABB'
-import { Octree } from '../utils/Octree'
-import type { Quaternion } from '../math/Quaternion'
+import { Shape } from '../shapes/Shape.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import { Transform } from '../math/Transform.ts'
+import { AABB } from '../collision/AABB.ts'
+import { Octree } from '../utils/Octree.ts'
+import type { Quaternion } from '../math/Quaternion.ts'
 
 /**
  * @class Trimesh

@@ -1,6 +1,6 @@
-import { Vec3 } from '../math/Vec3'
-import { Equation } from '../equations/Equation'
-import type { Body } from '../objects/Body'
+import { Vec3 } from '../math/Vec3.ts'
+import { Equation } from '../equations/Equation.ts'
+import type { Body } from '../objects/Body.ts'
 
 export type ConeEquationOptions = {
   maxForce?: number

@@ -1,10 +1,10 @@
-import { Broadphase } from '../collision/Broadphase'
-import { Vec3 } from '../math/Vec3'
-import { Shape } from '../shapes/Shape'
-import type { Body } from '../objects/Body'
-import type { Sphere } from '../shapes/Sphere'
-import type { Plane } from '../shapes/Plane'
-import type { World } from '../world/World'
+import { Broadphase } from '../collision/Broadphase.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import { Shape } from '../shapes/Shape.ts'
+import type { Body } from '../objects/Body.ts'
+import type { Sphere } from '../shapes/Sphere.ts'
+import type { Plane } from '../shapes/Plane.ts'
+import type { World } from '../world/World.ts'
 
 /**
  * Axis aligned uniform grid broadphase.

@@ -1,4 +1,4 @@
-import { Mat3 } from '../math/Mat3'
+import { Mat3 } from '../math/Mat3.ts'
 
 /**
  * 3-dimensional vector

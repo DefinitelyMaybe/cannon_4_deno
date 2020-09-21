@@ -1,9 +1,10 @@
-import { Shape } from '../shapes/Shape'
-import { ConvexPolyhedron } from '../shapes/ConvexPolyhedron'
-import { Vec3 } from '../math/Vec3'
-import { Utils } from '../utils/Utils'
-import type { AABB } from '../collision/AABB'
-import type { Quaternion } from '../math/Quaternion'
+/// <reference lib="dom" />
+import { Shape } from '../shapes/Shape.ts'
+import { ConvexPolyhedron } from '../shapes/ConvexPolyhedron.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import { Utils } from '../utils/Utils.ts'
+import type { AABB } from '../collision/AABB.ts'
+import type { Quaternion } from '../math/Quaternion.ts'
 
 export type HeightfieldOptions = {
   maxValue?: number | null

@@ -1,7 +1,7 @@
-import { AABB } from '../collision/AABB'
-import { Vec3 } from '../math/Vec3'
-import type { Transform } from '../math/Transform'
-import type { Ray } from '../collision/Ray'
+import { AABB } from '../collision/AABB.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import type { Transform } from '../math/Transform.ts'
+import type { Ray } from '../collision/Ray.ts'
 
 /**
  * @class OctreeNode

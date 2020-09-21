@@ -1,7 +1,7 @@
-import { Shape } from '../shapes/Shape'
-import { Vec3 } from '../math/Vec3'
-import { ConvexPolyhedron } from '../shapes/ConvexPolyhedron'
-import type { Quaternion } from '../math/Quaternion'
+import { Shape } from '../shapes/Shape.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import { ConvexPolyhedron } from '../shapes/ConvexPolyhedron.ts'
+import type { Quaternion } from '../math/Quaternion.ts'
 
 /**
  * A 3d box shape.

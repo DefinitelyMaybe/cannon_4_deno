@@ -1,7 +1,7 @@
-import { Shape } from '../shapes/Shape'
-import { Vec3 } from '../math/Vec3'
-import { Transform } from '../math/Transform'
-import type { Quaternion } from '../math/Quaternion'
+import { Shape } from '../shapes/Shape.ts'
+import { Vec3 } from '../math/Vec3.ts'
+import { Transform } from '../math/Transform.ts'
+import type { Quaternion } from '../math/Quaternion.ts'
 
 export type ConvexPolyhedronContactPoint = {
   point: Vec3
