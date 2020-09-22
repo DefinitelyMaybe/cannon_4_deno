@@ -1,6 +1,6 @@
-import { Vec3 } from '../math/Vec3.ts'
-import type { Body } from '../objects/Body.ts'
-import type { Shape } from '../shapes/Shape.ts'
+import { Vec3 } from "../math/Vec3.ts";
+import type { Body } from "../objects/Body.ts";
+import type { Shape } from "../shapes/Shape.ts";
 
 /**
  * Storage for Ray casting data.
@@ -8,28 +8,28 @@ import type { Shape } from '../shapes/Shape.ts'
  * @constructor
  */
 export class RaycastResult {
-  rayFromWorld: Vec3
-  rayToWorld: Vec3
-  hitNormalWorld: Vec3
-  hitPointWorld: Vec3
-  hasHit: boolean
-  shape: Shape | null
-  body: Body | null
-  hitFaceIndex: number // The index of the hit triangle, if the hit shape was a trimesh.
-  distance: number // Distance to the hit. Will be set to -1 if there was no hit.
-  shouldStop: boolean // If the ray should stop traversing the bodies.
+  rayFromWorld: Vec3;
+  rayToWorld: Vec3;
+  hitNormalWorld: Vec3;
+  hitPointWorld: Vec3;
+  hasHit: boolean;
+  shape: Shape | null;
+  body: Body | null;
+  hitFaceIndex: number; // The index of the hit triangle, if the hit shape was a trimesh.
+  distance: number; // Distance to the hit. Will be set to -1 if there was no hit.
+  shouldStop: boolean; // If the ray should stop traversing the bodies.
 
   constructor() {
-    this.rayFromWorld = new Vec3()
-    this.rayToWorld = new Vec3()
-    this.hitNormalWorld = new Vec3()
-    this.hitPointWorld = new Vec3()
-    this.hasHit = false
-    this.shape = null
-    this.body = null
-    this.hitFaceIndex = -1
-    this.distance = -1
-    this.shouldStop = false
+    this.rayFromWorld = new Vec3();
+    this.rayToWorld = new Vec3();
+    this.hitNormalWorld = new Vec3();
+    this.hitPointWorld = new Vec3();
+    this.hasHit = false;
+    this.shape = null;
+    this.body = null;
+    this.hitFaceIndex = -1;
+    this.distance = -1;
+    this.shouldStop = false;
   }
 
   /**
@@ -37,23 +37,23 @@ export class RaycastResult {
    * @method reset
    */
   reset(): void {
-    this.rayFromWorld.setZero()
-    this.rayToWorld.setZero()
-    this.hitNormalWorld.setZero()
-    this.hitPointWorld.setZero()
-    this.hasHit = false
-    this.shape = null
-    this.body = null
-    this.hitFaceIndex = -1
-    this.distance = -1
-    this.shouldStop = false
+    this.rayFromWorld.setZero();
+    this.rayToWorld.setZero();
+    this.hitNormalWorld.setZero();
+    this.hitPointWorld.setZero();
+    this.hasHit = false;
+    this.shape = null;
+    this.body = null;
+    this.hitFaceIndex = -1;
+    this.distance = -1;
+    this.shouldStop = false;
   }
 
   /**
    * @method abort
    */
   abort(): void {
-    this.shouldStop = true
+    this.shouldStop = true;
   }
 
   /**
@@ -73,14 +73,14 @@ export class RaycastResult {
     hitPointWorld: Vec3,
     shape: Shape,
     body: Body,
-    distance: number
+    distance: number,
   ): void {
-    this.rayFromWorld.copy(rayFromWorld)
-    this.rayToWorld.copy(rayToWorld)
-    this.hitNormalWorld.copy(hitNormalWorld)
-    this.hitPointWorld.copy(hitPointWorld)
-    this.shape = shape
-    this.body = body
-    this.distance = distance
+    this.rayFromWorld.copy(rayFromWorld);
+    this.rayToWorld.copy(rayToWorld);
+    this.hitNormalWorld.copy(hitNormalWorld);
+    this.hitPointWorld.copy(hitPointWorld);
+    this.shape = shape;
+    this.body = body;
+    this.distance = distance;
   }
 }

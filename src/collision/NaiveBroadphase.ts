@@ -1,7 +1,7 @@
-import { Broadphase } from '../collision/Broadphase.ts'
-import type { AABB } from '../collision/AABB.ts'
-import type { Body } from '../objects/Body.ts'
-import type { World } from '../world/World.ts'
+import { Broadphase } from "../collision/Broadphase.ts";
+import type { AABB } from "../collision/AABB.ts";
+import type { Body } from "../objects/Body.ts";
+import type { World } from "../world/World.ts";
 
 /**
  * Naive broadphase implementation, used in lack of better ones.
@@ -12,7 +12,7 @@ import type { World } from '../world/World.ts'
  */
 export class NaiveBroadphase extends Broadphase {
   constructor() {
-    super()
+    super();
   }
 
   /**
@@ -23,22 +23,22 @@ export class NaiveBroadphase extends Broadphase {
    * @param {Array} pairs2
    */
   collisionPairs(world: World, pairs1: Body[], pairs2: Body[]): void {
-    const bodies = world.bodies
-    const n = bodies.length
-    let bi
-    let bj
+    const bodies = world.bodies;
+    const n = bodies.length;
+    let bi;
+    let bj;
 
     // Naive N^2 ftw!
     for (let i = 0; i !== n; i++) {
       for (let j = 0; j !== i; j++) {
-        bi = bodies[i]
-        bj = bodies[j]
+        bi = bodies[i];
+        bj = bodies[j];
 
         if (!this.needBroadphaseCollision(bi, bj)) {
-          continue
+          continue;
         }
 
-        this.intersectionTest(bi, bj, pairs1, pairs2)
+        this.intersectionTest(bi, bj, pairs1, pairs2);
       }
     }
   }
@@ -53,18 +53,18 @@ export class NaiveBroadphase extends Broadphase {
    */
   aabbQuery(world: World, aabb: AABB, result: Body[] = []): Body[] {
     for (let i = 0; i < world.bodies.length; i++) {
-      const b = world.bodies[i]
+      const b = world.bodies[i];
 
       if (b.aabbNeedsUpdate) {
-        b.computeAABB()
+        b.computeAABB();
       }
 
       // Ugly hack until Body gets aabb
       if (b.aabb.overlaps(aabb)) {
-        result.push(b)
+        result.push(b);
       }
     }
 
-    return result
+    return result;
   }
 }

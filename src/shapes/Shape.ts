@@ -1,7 +1,7 @@
-import type { Vec3 } from '../math/Vec3.ts'
-import type { Quaternion } from '../math/Quaternion.ts'
-import type { Body } from '../objects/Body.ts'
-import type { Material } from '../material/Material.ts'
+import type { Vec3 } from "../math/Vec3.ts";
+import type { Quaternion } from "../math/Quaternion.ts";
+import type { Body } from "../objects/Body.ts";
+import type { Material } from "../material/Material.ts";
 
 export const SHAPE_TYPES = {
   SPHERE: 1 as const,
@@ -13,17 +13,17 @@ export const SHAPE_TYPES = {
   PARTICLE: 64 as const,
   CYLINDER: 128 as const,
   TRIMESH: 256 as const,
-}
+};
 
-export type ShapeType = typeof SHAPE_TYPES[keyof typeof SHAPE_TYPES]
+export type ShapeType = typeof SHAPE_TYPES[keyof typeof SHAPE_TYPES];
 
 export type ShapeOptions = {
-  type?: ShapeType
-  collisionResponse?: boolean
-  collisionFilterGroup?: number
-  collisionFilterMask?: number
-  material?: Material
-}
+  type?: ShapeType;
+  collisionResponse?: boolean;
+  collisionFilterGroup?: number;
+  collisionFilterMask?: number;
+  material?: Material;
+};
 
 /**
  * Base class for shapes
@@ -37,27 +37,33 @@ export type ShapeOptions = {
  * @author schteppe
  */
 export class Shape {
-  id: number // Identifyer of the Shape.
-  type: ShapeType | 0 // The type of this shape. Must be set to an int > 0 by subclasses.
-  boundingSphereRadius: number // The local bounding sphere radius of this shape.
-  collisionResponse: boolean // Whether to produce contact forces when in contact with other bodies. Note that contacts will be generated, but they will be disabled.
-  collisionFilterGroup: number
-  collisionFilterMask: number
-  material: Material | null
-  body: Body | null
+  id: number; // Identifyer of the Shape.
+  type: ShapeType | 0; // The type of this shape. Must be set to an int > 0 by subclasses.
+  boundingSphereRadius: number; // The local bounding sphere radius of this shape.
+  collisionResponse: boolean; // Whether to produce contact forces when in contact with other bodies. Note that contacts will be generated, but they will be disabled.
+  collisionFilterGroup: number;
+  collisionFilterMask: number;
+  material: Material | null;
+  body: Body | null;
 
-  static idCounter: number
-  static types: typeof SHAPE_TYPES
+  static idCounter: number;
+  static types: typeof SHAPE_TYPES;
 
   constructor(options: ShapeOptions = {}) {
-    this.id = Shape.idCounter++
-    this.type = options.type || 0
-    this.boundingSphereRadius = 0
-    this.collisionResponse = options.collisionResponse ? options.collisionResponse : true
-    this.collisionFilterGroup = options.collisionFilterGroup !== undefined ? options.collisionFilterGroup : 1
-    this.collisionFilterMask = options.collisionFilterMask !== undefined ? options.collisionFilterMask : -1
-    this.material = options.material ? options.material : null
-    this.body = null
+    this.id = Shape.idCounter++;
+    this.type = options.type || 0;
+    this.boundingSphereRadius = 0;
+    this.collisionResponse = options.collisionResponse
+      ? options.collisionResponse
+      : true;
+    this.collisionFilterGroup = options.collisionFilterGroup !== undefined
+      ? options.collisionFilterGroup
+      : 1;
+    this.collisionFilterMask = options.collisionFilterMask !== undefined
+      ? options.collisionFilterMask
+      : -1;
+    this.material = options.material ? options.material : null;
+    this.body = null;
   }
 
   /**
@@ -65,7 +71,7 @@ export class Shape {
    * @method updateBoundingSphereRadius
    */
   updateBoundingSphereRadius(): void {
-    throw `computeBoundingSphereRadius() not implemented for shape type ${this.type}`
+    throw `computeBoundingSphereRadius() not implemented for shape type ${this.type}`;
   }
 
   /**
@@ -74,7 +80,7 @@ export class Shape {
    * @return {Number}
    */
   volume(): number {
-    throw `volume() not implemented for shape type ${this.type}`
+    throw `volume() not implemented for shape type ${this.type}`;
   }
 
   /**
@@ -85,15 +91,15 @@ export class Shape {
    * @see http://en.wikipedia.org/wiki/List_of_moments_of_inertia
    */
   calculateLocalInertia(mass: number, target: Vec3): void {
-    throw `calculateLocalInertia() not implemented for shape type ${this.type}`
+    throw `calculateLocalInertia() not implemented for shape type ${this.type}`;
   }
 
   calculateWorldAABB(pos: Vec3, quat: Quaternion, min: Vec3, max: Vec3): void {
-    throw `calculateWorldAABB() not implemented for shape type ${this.type}`
+    throw `calculateWorldAABB() not implemented for shape type ${this.type}`;
   }
 }
 
-Shape.idCounter = 0
+Shape.idCounter = 0;
 
 /**
  * The available shape types.
@@ -101,4 +107,4 @@ Shape.idCounter = 0
  * @property types
  * @type {Object}
  */
-Shape.types = SHAPE_TYPES
+Shape.types = SHAPE_TYPES;

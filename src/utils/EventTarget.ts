@@ -4,7 +4,7 @@
  * @constructor
  */
 export class EventTarget {
-  private _listeners: Record<string, Function[]> | undefined
+  private _listeners: Record<string, Function[]> | undefined;
 
   constructor() {}
 
@@ -17,16 +17,16 @@ export class EventTarget {
    */
   addEventListener(type: string, listener: Function): EventTarget {
     if (this._listeners === undefined) {
-      this._listeners = {}
+      this._listeners = {};
     }
-    const listeners = this._listeners
+    const listeners = this._listeners;
     if (listeners[type] === undefined) {
-      listeners[type] = []
+      listeners[type] = [];
     }
     if (!listeners[type].includes(listener)) {
-      listeners[type].push(listener)
+      listeners[type].push(listener);
     }
-    return this
+    return this;
   }
 
   /**
@@ -38,13 +38,13 @@ export class EventTarget {
    */
   hasEventListener(type: string, listener: Function): boolean {
     if (this._listeners === undefined) {
-      return false
+      return false;
     }
-    const listeners = this._listeners
+    const listeners = this._listeners;
     if (listeners[type] !== undefined && listeners[type].includes(listener)) {
-      return true
+      return true;
     }
-    return false
+    return false;
   }
 
   /**
@@ -55,10 +55,10 @@ export class EventTarget {
    */
   hasAnyEventListener(type: string): boolean {
     if (this._listeners === undefined) {
-      return false
+      return false;
     }
-    const listeners = this._listeners
-    return listeners[type] !== undefined
+    const listeners = this._listeners;
+    return listeners[type] !== undefined;
   }
 
   /**
@@ -70,17 +70,17 @@ export class EventTarget {
    */
   removeEventListener(type: string, listener: Function): EventTarget {
     if (this._listeners === undefined) {
-      return this
+      return this;
     }
-    const listeners = this._listeners
+    const listeners = this._listeners;
     if (listeners[type] === undefined) {
-      return this
+      return this;
     }
-    const index = listeners[type].indexOf(listener)
+    const index = listeners[type].indexOf(listener);
     if (index !== -1) {
-      listeners[type].splice(index, 1)
+      listeners[type].splice(index, 1);
     }
-    return this
+    return this;
   }
 
   /**
@@ -92,16 +92,16 @@ export class EventTarget {
    */
   dispatchEvent(event: any): EventTarget {
     if (this._listeners === undefined) {
-      return this
+      return this;
     }
-    const listeners = this._listeners
-    const listenerArray = listeners[event.type]
+    const listeners = this._listeners;
+    const listenerArray = listeners[event.type];
     if (listenerArray !== undefined) {
-      event.target = this
+      event.target = this;
       for (let i = 0, l = listenerArray.length; i < l; i++) {
-        listenerArray[i].call(this, event)
+        listenerArray[i].call(this, event);
       }
     }
-    return this
+    return this;
   }
 }

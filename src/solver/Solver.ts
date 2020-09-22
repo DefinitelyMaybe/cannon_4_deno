@@ -1,5 +1,5 @@
-import type { Equation } from '../equations/Equation.ts'
-import type { World } from '../world/World.ts'
+import type { Equation } from "../equations/Equation.ts";
+import type { World } from "../world/World.ts";
 
 /**
  * Constraint equation solver base class.
@@ -8,10 +8,10 @@ import type { World } from '../world/World.ts'
  * @author schteppe / https://github.com/schteppe
  */
 export class Solver {
-  equations: Equation[] // All equations to be solved
+  equations: Equation[]; // All equations to be solved
 
   constructor() {
-    this.equations = []
+    this.equations = [];
   }
 
   /**
@@ -25,7 +25,7 @@ export class Solver {
     return (
       // Should return the number of iterations done!
       0
-    )
+    );
   }
 
   /**
@@ -35,7 +35,7 @@ export class Solver {
    */
   addEquation(eq: Equation): void {
     if (eq.enabled) {
-      this.equations.push(eq)
+      this.equations.push(eq);
     }
   }
 
@@ -45,10 +45,10 @@ export class Solver {
    * @param {Equation} eq
    */
   removeEquation(eq: Equation): void {
-    const eqs = this.equations
-    const i = eqs.indexOf(eq)
+    const eqs = this.equations;
+    const i = eqs.indexOf(eq);
     if (i !== -1) {
-      eqs.splice(i, 1)
+      eqs.splice(i, 1);
     }
   }
 
@@ -57,6 +57,6 @@ export class Solver {
    * @method removeAllEquations
    */
   removeAllEquations(): void {
-    this.equations.length = 0
+    this.equations.length = 0;
   }
 }

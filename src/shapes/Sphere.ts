@@ -1,6 +1,6 @@
-import { Shape } from '../shapes/Shape.ts'
-import { Vec3 } from '../math/Vec3.ts'
-import type { Quaternion } from '../math/Quaternion.ts'
+import { Shape } from "../shapes/Shape.ts";
+import { Vec3 } from "../math/Vec3.ts";
+import type { Quaternion } from "../math/Quaternion.ts";
 
 /**
  * Spherical shape
@@ -11,43 +11,43 @@ import type { Quaternion } from '../math/Quaternion.ts'
  * @author schteppe / http://github.com/schteppe
  */
 export class Sphere extends Shape {
-  radius: number
+  radius: number;
 
   constructor(radius: number) {
-    super({ type: Shape.types.SPHERE })
+    super({ type: Shape.types.SPHERE });
 
-    this.radius = radius !== undefined ? radius : 1.0
+    this.radius = radius !== undefined ? radius : 1.0;
 
     if (this.radius < 0) {
-      throw new Error('The sphere radius cannot be negative.')
+      throw new Error("The sphere radius cannot be negative.");
     }
 
-    this.updateBoundingSphereRadius()
+    this.updateBoundingSphereRadius();
   }
 
   calculateLocalInertia(mass: number, target = new Vec3()): Vec3 {
-    const I = (2.0 * mass * this.radius * this.radius) / 5.0
-    target.x = I
-    target.y = I
-    target.z = I
-    return target
+    const I = (2.0 * mass * this.radius * this.radius) / 5.0;
+    target.x = I;
+    target.y = I;
+    target.z = I;
+    return target;
   }
 
   volume(): number {
-    return (4.0 * Math.PI * Math.pow(this.radius, 3)) / 3.0
+    return (4.0 * Math.PI * Math.pow(this.radius, 3)) / 3.0;
   }
 
   updateBoundingSphereRadius(): void {
-    this.boundingSphereRadius = this.radius
+    this.boundingSphereRadius = this.radius;
   }
 
   calculateWorldAABB(pos: Vec3, quat: Quaternion, min: Vec3, max: Vec3): void {
-    const r = this.radius
-    const axes = ['x', 'y', 'z'] as ['x', 'y', 'z']
+    const r = this.radius;
+    const axes = ["x", "y", "z"] as ["x", "y", "z"];
     for (let i = 0; i < axes.length; i++) {
-      const ax = axes[i]
-      min[ax] = pos[ax] - r
-      max[ax] = pos[ax] + r
+      const ax = axes[i];
+      min[ax] = pos[ax] - r;
+      max[ax] = pos[ax] + r;
     }
   }
 }

@@ -1,4 +1,4 @@
-import type { Body } from '../objects/Body.ts'
+import type { Body } from "../objects/Body.ts";
 
 /**
  * Collision "matrix". It's actually a triangular-shaped array of whether two bodies are touching this step, for reference next step
@@ -6,10 +6,10 @@ import type { Body } from '../objects/Body.ts'
  * @constructor
  */
 export class ArrayCollisionMatrix {
-  matrix: number[] // The matrix storage.
+  matrix: number[]; // The matrix storage.
 
   constructor() {
-    this.matrix = []
+    this.matrix = [];
   }
 
   /**
@@ -20,14 +20,14 @@ export class ArrayCollisionMatrix {
    * @return {Number}
    */
   get(bi: Body, bj: Body): number {
-    let { index: i } = bi
-    let { index: j } = bj
+    let { index: i } = bi;
+    let { index: j } = bj;
     if (j > i) {
-      const temp = j
-      j = i
-      i = temp
+      const temp = j;
+      j = i;
+      i = temp;
     }
-    return this.matrix[((i * (i + 1)) >> 1) + j - 1]
+    return this.matrix[((i * (i + 1)) >> 1) + j - 1];
   }
 
   /**
@@ -38,14 +38,14 @@ export class ArrayCollisionMatrix {
    * @param {boolean} value
    */
   set(bi: Body, bj: Body, value: boolean): void {
-    let { index: i } = bi
-    let { index: j } = bj
+    let { index: i } = bi;
+    let { index: j } = bj;
     if (j > i) {
-      const temp = j
-      j = i
-      i = temp
+      const temp = j;
+      j = i;
+      i = temp;
     }
-    this.matrix[((i * (i + 1)) >> 1) + j - 1] = value ? 1 : 0
+    this.matrix[((i * (i + 1)) >> 1) + j - 1] = value ? 1 : 0;
   }
 
   /**
@@ -54,7 +54,7 @@ export class ArrayCollisionMatrix {
    */
   reset(): void {
     for (let i = 0, l = this.matrix.length; i !== l; i++) {
-      this.matrix[i] = 0
+      this.matrix[i] = 0;
     }
   }
 
@@ -64,6 +64,6 @@ export class ArrayCollisionMatrix {
    * @param {Number} n
    */
   setNumObjects(n: number): void {
-    this.matrix.length = (n * (n - 1)) >> 1
+    this.matrix.length = (n * (n - 1)) >> 1;
   }
 }

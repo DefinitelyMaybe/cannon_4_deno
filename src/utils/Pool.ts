@@ -4,12 +4,12 @@
  * @constructor
  */
 export class Pool {
-  objects: any[]
-  type: any
+  objects: any[];
+  type: any;
 
   constructor() {
-    this.objects = []
-    this.type = Object
+    this.objects = [];
+    this.type = Object;
   }
 
   /**
@@ -18,11 +18,11 @@ export class Pool {
    * @param {Object} obj
    */
   release(...args: any[]): Pool {
-    const Nargs = args.length
+    const Nargs = args.length;
     for (let i = 0; i !== Nargs; i++) {
-      this.objects.push(args[i])
+      this.objects.push(args[i]);
     }
-    return this
+    return this;
   }
 
   /**
@@ -32,9 +32,9 @@ export class Pool {
    */
   get(): any {
     if (this.objects.length === 0) {
-      return this.constructObject()
+      return this.constructObject();
     } else {
-      return this.objects.pop()
+      return this.objects.pop();
     }
   }
 
@@ -44,7 +44,9 @@ export class Pool {
    * @return {mixed}
    */
   constructObject(): void {
-    throw new Error('constructObject() not implemented in this Pool subclass yet!')
+    throw new Error(
+      "constructObject() not implemented in this Pool subclass yet!",
+    );
   }
 
   /**
@@ -53,16 +55,16 @@ export class Pool {
    * @return {Pool} Self, for chaining
    */
   resize(size: number): Pool {
-    const objects = this.objects
+    const objects = this.objects;
 
     while (objects.length > size) {
-      objects.pop()
+      objects.pop();
     }
 
     while (objects.length < size) {
-      objects.push(this.constructObject())
+      objects.push(this.constructObject());
     }
 
-    return this
+    return this;
   }
 }

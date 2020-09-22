@@ -1,7 +1,7 @@
-import { Constraint } from '../constraints/Constraint.ts'
-import { ContactEquation } from '../equations/ContactEquation.ts'
-import { Vec3 } from '../math/Vec3.ts'
-import type { Body } from '../objects/Body.ts'
+import { Constraint } from "../constraints/Constraint.ts";
+import { ContactEquation } from "../equations/ContactEquation.ts";
+import { Vec3 } from "../math/Vec3.ts";
+import type { Body } from "../objects/Body.ts";
 
 /**
  * Connects two bodies at given offset points.
@@ -29,48 +29,54 @@ import type { Body } from '../objects/Body.ts'
  *     world.addConstraint(constraint);
  */
 export class PointToPointConstraint extends Constraint {
-  pivotA: Vec3 // Pivot, defined locally in bodyA.
-  pivotB: Vec3 // Pivot, defined locally in bodyB.
-  equationX: ContactEquation
-  equationY: ContactEquation
-  equationZ: ContactEquation
+  pivotA: Vec3; // Pivot, defined locally in bodyA.
+  pivotB: Vec3; // Pivot, defined locally in bodyB.
+  equationX: ContactEquation;
+  equationY: ContactEquation;
+  equationZ: ContactEquation;
 
-  constructor(bodyA: Body, pivotA = new Vec3(), bodyB: Body, pivotB = new Vec3(), maxForce = 1e6) {
-    super(bodyA, bodyB)
+  constructor(
+    bodyA: Body,
+    pivotA = new Vec3(),
+    bodyB: Body,
+    pivotB = new Vec3(),
+    maxForce = 1e6,
+  ) {
+    super(bodyA, bodyB);
 
-    this.pivotA = pivotA.clone()
-    this.pivotB = pivotB.clone()
+    this.pivotA = pivotA.clone();
+    this.pivotB = pivotB.clone();
 
-    const x = (this.equationX = new ContactEquation(bodyA, bodyB))
-    const y = (this.equationY = new ContactEquation(bodyA, bodyB))
-    const z = (this.equationZ = new ContactEquation(bodyA, bodyB))
+    const x = (this.equationX = new ContactEquation(bodyA, bodyB));
+    const y = (this.equationY = new ContactEquation(bodyA, bodyB));
+    const z = (this.equationZ = new ContactEquation(bodyA, bodyB));
 
     // Equations to be fed to the solver
-    this.equations.push(x, y, z)
+    this.equations.push(x, y, z);
 
     // Make the equations bidirectional
-    x.minForce = y.minForce = z.minForce = -maxForce
-    x.maxForce = y.maxForce = z.maxForce = maxForce
+    x.minForce = y.minForce = z.minForce = -maxForce;
+    x.maxForce = y.maxForce = z.maxForce = maxForce;
 
-    x.ni.set(1, 0, 0)
-    y.ni.set(0, 1, 0)
-    z.ni.set(0, 0, 1)
+    x.ni.set(1, 0, 0);
+    y.ni.set(0, 1, 0);
+    z.ni.set(0, 0, 1);
   }
 
   update(): void {
-    const bodyA = this.bodyA
-    const bodyB = this.bodyB
-    const x = this.equationX
-    const y = this.equationY
-    const z = this.equationZ
+    const bodyA = this.bodyA;
+    const bodyB = this.bodyB;
+    const x = this.equationX;
+    const y = this.equationY;
+    const z = this.equationZ;
 
     // Rotate the pivots to world space
-    bodyA.quaternion.vmult(this.pivotA, x.ri)
-    bodyB.quaternion.vmult(this.pivotB, x.rj)
+    bodyA.quaternion.vmult(this.pivotA, x.ri);
+    bodyB.quaternion.vmult(this.pivotB, x.rj);
 
-    y.ri.copy(x.ri)
-    y.rj.copy(x.rj)
-    z.ri.copy(x.ri)
-    z.rj.copy(x.rj)
+    y.ri.copy(x.ri);
+    y.rj.copy(x.rj);
+    z.ri.copy(x.ri);
+    z.rj.copy(x.rj);
   }
 }

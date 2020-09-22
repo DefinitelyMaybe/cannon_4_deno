@@ -1,11 +1,11 @@
-import { Utils } from '../utils/Utils.ts'
-import type { Body } from '../objects/Body.ts'
-import type { Equation } from '../equations/Equation.ts'
+import { Utils } from "../utils/Utils.ts";
+import type { Body } from "../objects/Body.ts";
+import type { Equation } from "../equations/Equation.ts";
 
 export type ConstraintOptions = {
-  collideConnected?: boolean
-  wakeUpBodies?: boolean
-}
+  collideConnected?: boolean;
+  wakeUpBodies?: boolean;
+};
 
 /**
  * Constraint base class
@@ -19,32 +19,32 @@ export type ConstraintOptions = {
  * @param {boolean} [options.wakeUpBodies=true]
  */
 export class Constraint {
-  equations: Equation[] // Equations to be solved in this constraint.
-  bodyA: Body
-  bodyB: Body
-  id: number
-  collideConnected: boolean // Set to true if you want the bodies to collide when they are connected.
+  equations: Equation[]; // Equations to be solved in this constraint.
+  bodyA: Body;
+  bodyB: Body;
+  id: number;
+  collideConnected: boolean; // Set to true if you want the bodies to collide when they are connected.
 
-  static idCounter: number
+  static idCounter: number;
 
   constructor(bodyA: Body, bodyB: Body, options: ConstraintOptions = {}) {
     options = Utils.defaults(options, {
       collideConnected: true,
       wakeUpBodies: true,
-    })
+    });
 
-    this.equations = []
-    this.bodyA = bodyA
-    this.bodyB = bodyB
-    this.id = Constraint.idCounter++
-    this.collideConnected = options.collideConnected!
+    this.equations = [];
+    this.bodyA = bodyA;
+    this.bodyB = bodyB;
+    this.id = Constraint.idCounter++;
+    this.collideConnected = options.collideConnected!;
 
     if (options.wakeUpBodies) {
       if (bodyA) {
-        bodyA.wakeUp()
+        bodyA.wakeUp();
       }
       if (bodyB) {
-        bodyB.wakeUp()
+        bodyB.wakeUp();
       }
     }
   }
@@ -54,7 +54,9 @@ export class Constraint {
    * @method update
    */
   update(): void {
-    throw new Error('method update() not implmemented in this Constraint subclass!')
+    throw new Error(
+      "method update() not implmemented in this Constraint subclass!",
+    );
   }
 
   /**
@@ -62,9 +64,9 @@ export class Constraint {
    * @method enable
    */
   enable(): void {
-    const eqs = this.equations
+    const eqs = this.equations;
     for (let i = 0; i < eqs.length; i++) {
-      eqs[i].enabled = true
+      eqs[i].enabled = true;
     }
   }
 
@@ -73,11 +75,11 @@ export class Constraint {
    * @method disable
    */
   disable(): void {
-    const eqs = this.equations
+    const eqs = this.equations;
     for (let i = 0; i < eqs.length; i++) {
-      eqs[i].enabled = false
+      eqs[i].enabled = false;
     }
   }
 }
 
-Constraint.idCounter = 0
+Constraint.idCounter = 0;

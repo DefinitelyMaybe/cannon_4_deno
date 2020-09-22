@@ -1,4 +1,4 @@
-import type { Body } from '../objects/Body.ts'
+import type { Body } from "../objects/Body.ts";
 
 /**
  * Records what objects are colliding with each other
@@ -6,10 +6,10 @@ import type { Body } from '../objects/Body.ts'
  * @constructor
  */
 export class ObjectCollisionMatrix {
-  matrix: Record<string, boolean> // The matrix storage.
+  matrix: Record<string, boolean>; // The matrix storage.
 
   constructor() {
-    this.matrix = {}
+    this.matrix = {};
   }
 
   /**
@@ -19,14 +19,14 @@ export class ObjectCollisionMatrix {
    * @return {boolean}
    */
   get(bi: Body, bj: Body): boolean {
-    let { id: i } = bi
-    let { id: j } = bj
+    let { id: i } = bi;
+    let { id: j } = bj;
     if (j > i) {
-      const temp = j
-      j = i
-      i = temp
+      const temp = j;
+      j = i;
+      i = temp;
     }
-    return `${i}-${j}` in this.matrix
+    return `${i}-${j}` in this.matrix;
   }
 
   /**
@@ -36,17 +36,17 @@ export class ObjectCollisionMatrix {
    * @param {boolean} value
    */
   set(bi: Body, bj: Body, value: boolean): void {
-    let { id: i } = bi
-    let { id: j } = bj
+    let { id: i } = bi;
+    let { id: j } = bj;
     if (j > i) {
-      const temp = j
-      j = i
-      i = temp
+      const temp = j;
+      j = i;
+      i = temp;
     }
     if (value) {
-      this.matrix[`${i}-${j}`] = true
+      this.matrix[`${i}-${j}`] = true;
     } else {
-      delete this.matrix[`${i}-${j}`]
+      delete this.matrix[`${i}-${j}`];
     }
   }
 
@@ -55,7 +55,7 @@ export class ObjectCollisionMatrix {
    * @method reset
    */
   reset(): void {
-    this.matrix = {}
+    this.matrix = {};
   }
 
   /**

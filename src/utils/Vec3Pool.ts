@@ -1,5 +1,5 @@
-import { Pool } from '../utils/Pool.ts'
-import { Vec3 } from '../math/Vec3.ts'
+import { Pool } from "../utils/Pool.ts";
+import { Vec3 } from "../math/Vec3.ts";
 
 /**
  * @class Vec3Pool
@@ -7,12 +7,12 @@ import { Vec3 } from '../math/Vec3.ts'
  * @extends Pool
  */
 export class Vec3Pool extends Pool {
-  type: typeof Vec3
+  type: typeof Vec3;
 
   constructor() {
-    super()
+    super();
 
-    this.type = Vec3
+    this.type = Vec3;
   }
 
   /**
@@ -21,6 +21,6 @@ export class Vec3Pool extends Pool {
    * @return {Vec3}
    */
   constructObject(): Vec3 {
-    return new Vec3()
+    return new Vec3();
   }
 }
