@@ -5,7 +5,7 @@ A simple transformation of the cannon-es scripts for use within a deno workflow
 
 ```typescript
 // deps.ts
-import { World } from "https://deno.land/x/cannon_4_deno@v0.15.1.2/src/cannon-es.js"
+import { World } from "https://deno.land/x/cannon_4_deno@v0.15.1.3/src/cannon-es.js"
 
 // main.ts
 import { World } from "deps.ts"
