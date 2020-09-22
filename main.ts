@@ -24,9 +24,14 @@ for (const entry of walkSync("./src")) {
     let data = Deno.readTextFileSync(entry.path);
     data = data.replaceAll(/\.ts/g, ".js");
     data = data.replaceAll(/\/\/# sourceMappingURL=.+?map/g, "");
-    data = data.replace(/^/, '/// <reference lib="dom" />\n');
+    data = data.replace(/^/, `/// <reference types="./${entry.name.split(".")[0]}.ts" />\n/// <reference lib="dom" />\n`);
     Deno.writeTextFileSync(entry.path, data);
   } else if (entry.name.endsWith("map")) {
     Deno.removeSync(entry.path);
   }
 }
+
+// fmt afterwards
+Deno.run({
+  cmd: ["deno", "fmt"],
+});
