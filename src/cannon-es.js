@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 export * from "./collision/ObjectCollisionMatrix.js";
 export * from "./collision/AABB.js";
 export * from "./collision/ArrayCollisionMatrix.js";
