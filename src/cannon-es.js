@@ -1,3 +1,4 @@
+/// <reference types="./cannon-es.ts" />
 /// <reference lib="dom" />
 export * from "./collision/ObjectCollisionMatrix.js";
 export * from "./collision/AABB.js";
