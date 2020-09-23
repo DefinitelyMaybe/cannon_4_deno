@@ -1,4 +1,5 @@
 /// <reference types="./EventTarget.ts" />
+/// <reference lib="dom" />
 export class EventTarget {
     constructor() { }
     addEventListener(type, listener) {

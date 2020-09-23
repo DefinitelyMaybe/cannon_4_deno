@@ -1,4 +1,5 @@
 /// <reference types="./SAPBroadphase.ts" />
+/// <reference lib="dom" />
 import { Broadphase } from "../collision/Broadphase.js";
 export class SAPBroadphase extends Broadphase {
     constructor(world) {

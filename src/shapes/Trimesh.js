@@ -1,4 +1,5 @@
 /// <reference types="./Trimesh.ts" />
+/// <reference lib="dom" />
 import { Shape } from "../shapes/Shape.js";
 import { Vec3 } from "../math/Vec3.js";
 import { Transform } from "../math/Transform.js";

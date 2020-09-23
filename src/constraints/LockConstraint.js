@@ -1,4 +1,5 @@
 /// <reference types="./LockConstraint.ts" />
+/// <reference lib="dom" />
 import { PointToPointConstraint } from "../constraints/PointToPointConstraint.js";
 import { RotationalEquation } from "../equations/RotationalEquation.js";
 import { Vec3 } from "../math/Vec3.js";

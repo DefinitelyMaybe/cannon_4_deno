@@ -26,7 +26,7 @@ for (const entry of walkSync("./src")) {
       data = data.replaceAll(/\.ts/g, ".js");
       data = data.replace(
         /^/,
-        `/// <reference types="./${entry.name.split(".")[0]}.ts" />\n`,
+        `/// <reference types="./${entry.name.split(".")[0]}.ts" />\n/// <reference lib="dom" />\n`,
       );
       data = data.replace(/\/\/# sourceMappingURL=.+?map/g, "");
       Deno.writeTextFileSync(entry.path, data);

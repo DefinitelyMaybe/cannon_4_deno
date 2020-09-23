@@ -1,4 +1,5 @@
 /// <reference types="./TupleDictionary.ts" />
+/// <reference lib="dom" />
 export class TupleDictionary {
     constructor() {
         this.data = { keys: [] };

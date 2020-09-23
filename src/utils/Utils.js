@@ -1,4 +1,5 @@
 /// <reference types="./Utils.ts" />
+/// <reference lib="dom" />
 export function Utils() { }
 Utils.defaults = (options = {}, defaults) => {
     for (let key in defaults) {

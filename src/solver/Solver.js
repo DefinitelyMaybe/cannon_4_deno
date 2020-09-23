@@ -1,4 +1,5 @@
 /// <reference types="./Solver.ts" />
+/// <reference lib="dom" />
 export class Solver {
     constructor() {
         this.equations = [];

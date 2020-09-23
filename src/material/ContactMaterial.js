@@ -1,4 +1,5 @@
 /// <reference types="./ContactMaterial.ts" />
+/// <reference lib="dom" />
 import { Utils } from "../utils/Utils.js";
 export class ContactMaterial {
     constructor(m1, m2, options) {

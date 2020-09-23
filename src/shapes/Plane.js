@@ -1,4 +1,5 @@
 /// <reference types="./Plane.ts" />
+/// <reference lib="dom" />
 import { Shape } from "../shapes/Shape.js";
 import { Vec3 } from "../math/Vec3.js";
 export class Plane extends Shape {

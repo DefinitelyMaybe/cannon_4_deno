@@ -1,4 +1,5 @@
 /// <reference types="./Spring.ts" />
+/// <reference lib="dom" />
 import { Vec3 } from "../math/Vec3.js";
 export class Spring {
     constructor(bodyA, bodyB, options = {}) {

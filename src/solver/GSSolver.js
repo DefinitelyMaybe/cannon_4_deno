@@ -1,4 +1,5 @@
 /// <reference types="./GSSolver.ts" />
+/// <reference lib="dom" />
 import { Solver } from "../solver/Solver.js";
 export class GSSolver extends Solver {
     constructor() {

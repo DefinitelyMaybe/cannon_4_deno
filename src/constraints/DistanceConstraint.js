@@ -1,4 +1,5 @@
 /// <reference types="./DistanceConstraint.ts" />
+/// <reference lib="dom" />
 import { Constraint } from "../constraints/Constraint.js";
 import { ContactEquation } from "../equations/ContactEquation.js";
 export class DistanceConstraint extends Constraint {

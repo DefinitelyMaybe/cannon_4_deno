@@ -1,4 +1,5 @@
 /// <reference types="./Material.ts" />
+/// <reference lib="dom" />
 export class Material {
     constructor(options = {}) {
         let name = "";

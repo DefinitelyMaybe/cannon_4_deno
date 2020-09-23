@@ -1,4 +1,5 @@
 /// <reference types="./Broadphase.ts" />
+/// <reference lib="dom" />
 import { Body } from "../objects/Body.js";
 import { Vec3 } from "../math/Vec3.js";
 import { Quaternion } from "../math/Quaternion.js";

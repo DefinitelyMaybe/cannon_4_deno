@@ -1,4 +1,5 @@
 /// <reference types="./OverlapKeeper.ts" />
+/// <reference lib="dom" />
 export class OverlapKeeper {
     constructor() {
         this.current = [];

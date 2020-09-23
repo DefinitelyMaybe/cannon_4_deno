@@ -1,4 +1,5 @@
 /// <reference types="./SplitSolver.ts" />
+/// <reference lib="dom" />
 import { Solver } from "../solver/Solver.js";
 import { Body } from "../objects/Body.js";
 export class SplitSolver extends Solver {

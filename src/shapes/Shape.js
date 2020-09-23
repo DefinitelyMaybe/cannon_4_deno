@@ -1,4 +1,5 @@
 /// <reference types="./Shape.ts" />
+/// <reference lib="dom" />
 export const SHAPE_TYPES = {
     SPHERE: 1,
     PLANE: 2,

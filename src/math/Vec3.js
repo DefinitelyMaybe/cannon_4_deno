@@ -1,4 +1,5 @@
 /// <reference types="./Vec3.ts" />
+/// <reference lib="dom" />
 import { Mat3 } from "../math/Mat3.js";
 export class Vec3 {
     constructor(x = 0.0, y = 0.0, z = 0.0) {

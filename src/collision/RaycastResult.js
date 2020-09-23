@@ -1,4 +1,5 @@
 /// <reference types="./RaycastResult.ts" />
+/// <reference lib="dom" />
 import { Vec3 } from "../math/Vec3.js";
 export class RaycastResult {
     constructor() {

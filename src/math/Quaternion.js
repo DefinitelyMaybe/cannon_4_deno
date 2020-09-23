@@ -1,4 +1,5 @@
 /// <reference types="./Quaternion.ts" />
+/// <reference lib="dom" />
 import { Vec3 } from "../math/Vec3.js";
 export class Quaternion {
     constructor(x = 0, y = 0, z = 0, w = 1) {

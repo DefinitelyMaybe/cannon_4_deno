@@ -1,4 +1,5 @@
 /// <reference types="./AABB.ts" />
+/// <reference lib="dom" />
 import { Vec3 } from "../math/Vec3.js";
 export class AABB {
     constructor(options = {}) {
