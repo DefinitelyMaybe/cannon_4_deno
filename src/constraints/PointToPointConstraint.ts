@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { Constraint } from "../constraints/Constraint.ts";
 import { ContactEquation } from "../equations/ContactEquation.ts";
 import { Vec3 } from "../math/Vec3.ts";

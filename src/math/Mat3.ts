@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { Vec3 } from "../math/Vec3.ts";
 import type { Quaternion } from "../math/Quaternion.ts";
 

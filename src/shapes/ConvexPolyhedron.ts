@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { Shape } from "../shapes/Shape.ts";
 import { Vec3 } from "../math/Vec3.ts";
 import { Transform } from "../math/Transform.ts";

@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 /**
  * @class OverlapKeeper
  * @constructor

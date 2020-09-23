@@ -1,5 +1,4 @@
 /// <reference types="./SPHSystem.ts" />
-/// <reference lib="dom" />
 import { Vec3 } from "../math/Vec3.js";
 export class SPHSystem {
     constructor() {

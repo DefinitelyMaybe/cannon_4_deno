@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { ConvexPolyhedron } from "../shapes/ConvexPolyhedron.ts";
 import { Vec3 } from "../math/Vec3.ts";
 

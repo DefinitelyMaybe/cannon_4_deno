@@ -1,5 +1,4 @@
 /// <reference types="./Constraint.ts" />
-/// <reference lib="dom" />
 import { Utils } from "../utils/Utils.js";
 export class Constraint {
     constructor(bodyA, bodyB, options = {}) {

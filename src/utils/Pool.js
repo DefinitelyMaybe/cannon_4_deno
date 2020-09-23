@@ -1,5 +1,4 @@
 /// <reference types="./Pool.ts" />
-/// <reference lib="dom" />
 export class Pool {
     constructor() {
         this.objects = [];

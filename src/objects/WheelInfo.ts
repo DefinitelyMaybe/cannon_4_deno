@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { Vec3 } from "../math/Vec3.ts";
 import { Transform } from "../math/Transform.ts";
 import { RaycastResult } from "../collision/RaycastResult.ts";

@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { Mat3 } from "../math/Mat3.ts";
 
 /**

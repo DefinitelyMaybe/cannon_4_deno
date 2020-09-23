@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 export type MaterialOptions = {
   friction?: number;
   restitution?: number;

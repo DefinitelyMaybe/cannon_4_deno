@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { AABB } from "../collision/AABB.ts";
 import { Vec3 } from "../math/Vec3.ts";
 import type { Transform } from "../math/Transform.ts";

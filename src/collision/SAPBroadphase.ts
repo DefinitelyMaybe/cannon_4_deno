@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { Broadphase } from "../collision/Broadphase.ts";
 import type { AABB } from "../collision/AABB.ts";
 import type { Body } from "../objects/Body.ts";

@@ -1,5 +1,4 @@
 /// <reference types="./ConeTwistConstraint.ts" />
-/// <reference lib="dom" />
 import { PointToPointConstraint } from "../constraints/PointToPointConstraint.js";
 import { ConeEquation } from "../equations/ConeEquation.js";
 import { RotationalEquation } from "../equations/RotationalEquation.js";

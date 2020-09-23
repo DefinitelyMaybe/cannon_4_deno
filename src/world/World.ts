@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { EventTarget } from "../utils/EventTarget.ts";
 import { GSSolver } from "../solver/GSSolver.ts";
 import { NaiveBroadphase } from "../collision/NaiveBroadphase.ts";

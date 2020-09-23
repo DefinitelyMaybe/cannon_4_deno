@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 /**
  * For pooling objects that can be reused.
  * @class Pool

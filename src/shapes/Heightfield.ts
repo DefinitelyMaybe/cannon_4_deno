@@ -1,4 +1,5 @@
 /// <reference lib="dom" />
+/// <reference lib="dom" />
 import { Shape } from "../shapes/Shape.ts";
 import { ConvexPolyhedron } from "../shapes/ConvexPolyhedron.ts";
 import { Vec3 } from "../math/Vec3.ts";

@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { Broadphase } from "../collision/Broadphase.ts";
 import { Vec3 } from "../math/Vec3.ts";
 import { Shape } from "../shapes/Shape.ts";

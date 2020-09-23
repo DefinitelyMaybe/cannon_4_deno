@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { PointToPointConstraint } from "../constraints/PointToPointConstraint.ts";
 import { ConeEquation } from "../equations/ConeEquation.ts";
 import { RotationalEquation } from "../equations/RotationalEquation.ts";

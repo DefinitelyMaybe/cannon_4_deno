@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 /**
  * Base class for objects that dispatches events.
  * @class EventTarget

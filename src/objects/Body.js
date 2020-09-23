@@ -1,5 +1,4 @@
 /// <reference types="./Body.ts" />
-/// <reference lib="dom" />
 import { EventTarget } from "../utils/EventTarget.js";
 import { Vec3 } from "../math/Vec3.js";
 import { Mat3 } from "../math/Mat3.js";

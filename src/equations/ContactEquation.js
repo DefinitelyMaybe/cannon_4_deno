@@ -1,5 +1,4 @@
 /// <reference types="./ContactEquation.ts" />
-/// <reference lib="dom" />
 import { Equation } from "../equations/Equation.js";
 import { Vec3 } from "../math/Vec3.js";
 export class ContactEquation extends Equation {

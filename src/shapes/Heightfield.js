@@ -1,5 +1,4 @@
 /// <reference types="./Heightfield.ts" />
-/// <reference lib="dom" />
 import { Shape } from "../shapes/Shape.js";
 import { ConvexPolyhedron } from "../shapes/ConvexPolyhedron.js";
 import { Vec3 } from "../math/Vec3.js";

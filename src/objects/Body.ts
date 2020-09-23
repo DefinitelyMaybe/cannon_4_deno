@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { EventTarget } from "../utils/EventTarget.ts";
 import { Vec3 } from "../math/Vec3.ts";
 import { Mat3 } from "../math/Mat3.ts";

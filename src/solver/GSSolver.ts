@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { Solver } from "../solver/Solver.ts";
 import type { World } from "../world/World.ts";
 

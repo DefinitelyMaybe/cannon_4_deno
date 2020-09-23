@@ -1,5 +1,4 @@
 /// <reference types="./Transform.ts" />
-/// <reference lib="dom" />
 import { Vec3 } from "../math/Vec3.js";
 import { Quaternion } from "../math/Quaternion.js";
 export class Transform {

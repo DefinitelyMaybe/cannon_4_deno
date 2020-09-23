@@ -1,5 +1,4 @@
 /// <reference types="./World.ts" />
-/// <reference lib="dom" />
 import { EventTarget } from "../utils/EventTarget.js";
 import { GSSolver } from "../solver/GSSolver.js";
 import { NaiveBroadphase } from "../collision/NaiveBroadphase.js";

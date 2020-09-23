@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { Constraint } from "../constraints/Constraint.ts";
 import { ContactEquation } from "../equations/ContactEquation.ts";
 import type { Body } from "../objects/Body.ts";

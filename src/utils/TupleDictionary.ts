@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 /**
  * @class TupleDictionary
  * @constructor

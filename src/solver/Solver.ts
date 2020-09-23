@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import type { Equation } from "../equations/Equation.ts";
 import type { World } from "../world/World.ts";
 

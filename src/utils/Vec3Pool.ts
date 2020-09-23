@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { Pool } from "../utils/Pool.ts";
 import { Vec3 } from "../math/Vec3.ts";
 

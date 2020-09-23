@@ -1,5 +1,4 @@
 /// <reference types="./GridBroadphase.ts" />
-/// <reference lib="dom" />
 import { Broadphase } from "../collision/Broadphase.js";
 import { Vec3 } from "../math/Vec3.js";
 import { Shape } from "../shapes/Shape.js";

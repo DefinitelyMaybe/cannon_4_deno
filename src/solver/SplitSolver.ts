@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { Solver } from "../solver/Solver.ts";
 import { Body } from "../objects/Body.ts";
 import type { Equation } from "../equations/Equation.ts";

@@ -1,5 +1,4 @@
 /// <reference types="./Equation.ts" />
-/// <reference lib="dom" />
 import { JacobianElement } from "../math/JacobianElement.js";
 import { Vec3 } from "../math/Vec3.js";
 export class Equation {

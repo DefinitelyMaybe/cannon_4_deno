@@ -1,5 +1,4 @@
 /// <reference types="./ConeEquation.ts" />
-/// <reference lib="dom" />
 import { Vec3 } from "../math/Vec3.js";
 import { Equation } from "../equations/Equation.js";
 export class ConeEquation extends Equation {

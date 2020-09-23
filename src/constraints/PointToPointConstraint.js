@@ -1,5 +1,4 @@
 /// <reference types="./PointToPointConstraint.ts" />
-/// <reference lib="dom" />
 import { Constraint } from "../constraints/Constraint.js";
 import { ContactEquation } from "../equations/ContactEquation.js";
 import { Vec3 } from "../math/Vec3.js";

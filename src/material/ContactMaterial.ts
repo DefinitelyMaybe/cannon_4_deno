@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import { Utils } from "../utils/Utils.ts";
 import type { Material } from "../material/Material.ts";
 

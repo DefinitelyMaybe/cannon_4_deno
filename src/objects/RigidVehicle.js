@@ -1,5 +1,4 @@
 /// <reference types="./RigidVehicle.ts" />
-/// <reference lib="dom" />
 import { Vec3 } from "../math/Vec3.js";
 import { Body } from "../objects/Body.js";
 import { Sphere } from "../shapes/Sphere.js";

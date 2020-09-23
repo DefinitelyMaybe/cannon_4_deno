@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 import type { Body } from "../objects/Body.ts";
 
 /**

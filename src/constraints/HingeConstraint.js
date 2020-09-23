@@ -1,5 +1,4 @@
 /// <reference types="./HingeConstraint.ts" />
-/// <reference lib="dom" />
 import { PointToPointConstraint } from "../constraints/PointToPointConstraint.js";
 import { RotationalEquation } from "../equations/RotationalEquation.js";
 import { RotationalMotorEquation } from "../equations/RotationalMotorEquation.js";

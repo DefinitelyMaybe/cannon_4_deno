@@ -1,5 +1,4 @@
 /// <reference types="./ObjectCollisionMatrix.ts" />
-/// <reference lib="dom" />
 export class ObjectCollisionMatrix {
     constructor() {
         this.matrix = {};

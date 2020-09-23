@@ -1,3 +1,4 @@
+/// <reference lib="dom" />
 export * from "./collision/ObjectCollisionMatrix.ts";
 export * from "./collision/AABB.ts";
 export * from "./collision/ArrayCollisionMatrix.ts";

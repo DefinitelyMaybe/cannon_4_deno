@@ -1,5 +1,4 @@
 /// <reference types="./NaiveBroadphase.ts" />
-/// <reference lib="dom" />
 import { Broadphase } from "../collision/Broadphase.js";
 export class NaiveBroadphase extends Broadphase {
     constructor() {

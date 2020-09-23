@@ -1,5 +1,4 @@
 /// <reference types="./Octree.ts" />
-/// <reference lib="dom" />
 import { AABB } from "../collision/AABB.js";
 import { Vec3 } from "../math/Vec3.js";
 class OctreeNode {

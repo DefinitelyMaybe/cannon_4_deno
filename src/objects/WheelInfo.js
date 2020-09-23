@@ -1,5 +1,4 @@
 /// <reference types="./WheelInfo.ts" />
-/// <reference lib="dom" />
 import { Vec3 } from "../math/Vec3.js";
 import { Transform } from "../math/Transform.js";
 import { RaycastResult } from "../collision/RaycastResult.js";

@@ -1,5 +1,4 @@
 /// <reference types="./Cylinder.ts" />
-/// <reference lib="dom" />
 import { ConvexPolyhedron } from "../shapes/ConvexPolyhedron.js";
 import { Vec3 } from "../math/Vec3.js";
 export class Cylinder extends ConvexPolyhedron {
